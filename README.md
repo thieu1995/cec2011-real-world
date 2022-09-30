@@ -94,6 +94,25 @@ best_position, best_fitness = model.solve(problem_dict)
 print(f"Best solution: {best_position}, Best fitness: {best_fitness}")
 ```
 
+## Images
+
+<p align="center">
+<img src=".github/img/01.png" alt="environments path">
+</p>
+
+<p align="center">
+<img src=".github/img/02.png" alt="environments path">
+</p>
+
+<p align="center">
+<img src=".github/img/03.png" alt="example with problem">
+</p>
+
+<p align="center">
+<img src=".github/img/04.png" alt="example with mealpy">
+</p>
+
+
 
 
 
