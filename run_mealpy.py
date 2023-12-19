@@ -5,20 +5,17 @@
 # --------------------------------------------------%
 
 from cec2011_class import Problem01
-from mealpy.bio_based import SMA
+from mealpy import SMA, FloatVar
 
 prob = Problem01()
-
-problem_dict = {
-    "fit_func": prob.evaluate,
-    "lb": prob.lb,
-    "ub": prob.ub,
+problem = {
+    "bounds": FloatVar(lb=prob.lb, ub=prob.ub),
+    "obj_func": prob.evaluate,
     "minmax": "min",
-    "log_to": "console",
-    "save_population": False,
+    "log_to": "console"
 }
 
 ## Run the algorithm
-model = SMA.BaseSMA(epoch=100, pop_size=50, pr=0.03)
-best_position, best_fitness = model.solve(problem_dict)
-print(f"Best solution: {best_position}, Best fitness: {best_fitness}")
+model = SMA.OriginalSMA(epoch=100, pop_size=50, pr=0.03)
+g_best = model.solve(problem)
+print(f"Best solution: {g_best.solution}, Best fitness: {g_best.target.fitness}")
