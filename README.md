@@ -1,7 +1,8 @@
 # Install environments
 
-Install based on `requirements.txt` file.  After that, you need to install the `octave` and set up the path to the 
-`octave-cli.exe` file.
+Install based on `requirements.txt` file.  After that, you need to install the `octave` and set up the path to 
+the `octave-cli.exe` file.
+The tested working version: `oct2py=5.6.0` and `octave=8.4.0 windows 64`. 
 
 
 ### On Windows 
